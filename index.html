@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,26 +8,34 @@
 </head>
 <body>
 
-<h1>Smart Event Dashboard</h1>
+<h1>🎯 Smart Event Dashboard</h1>
 
-<div class="form-section">
-    <h2>Add New Event</h2>
+<div class="container">
 
-    <input type="text" id="title" placeholder="Event Title">
-    <input type="date" id="date">
+    <!-- Event Form -->
+    <div class="form-section">
+        <h2>Add New Event</h2>
 
-    <select id="category">
-        <option>Study</option>
-        <option>Sports</option>
-        <option>Personal</option>
-    </select>
+        <input type="text" id="title" placeholder="Event Title">
+        <input type="date" id="date">
+        <select id="category">
+            <option value="Study">Study</option>
+            <option value="Sports">Sports</option>
+            <option value="Personal">Personal</option>
+        </select>
 
-    <textarea id="description" placeholder="Description"></textarea>
+        <textarea id="description" placeholder="Event Description"></textarea>
 
-    <button id="addEvent">Add Event</button>
+        <button id="addEvent">Add Event</button>
+    </div>
+
+    <!-- Event Cards -->
+    <div class="events-section">
+        <h2>My Events</h2>
+        <div id="eventsContainer"></div>
+    </div>
+
 </div>
-
-<div id="eventsContainer"></div>
 
 <script src="script.js"></script>
 </body>
