@@ -21,3 +21,14 @@ card.innerHTML = `
 card.querySelector(".delete").addEventListener("click", function(){
     card.remove();
 });
+container.addEventListener("click", function(e){
+
+    if(e.target.classList.contains("delete")){
+        e.target.parentElement.remove();
+    }
+
+});
+<button class="complete">Complete</button>
+if(e.target.classList.contains("complete")){
+    e.target.parentElement.style.textDecoration = "line-through";
+}
