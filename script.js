@@ -13,3 +13,11 @@ addBtn.addEventListener("click", function(){
 
     container.appendChild(card);
 });
+card.innerHTML = `
+    <h3>${title}</h3>
+    <p>${date}</p>
+    <button class="delete">Delete</button>
+`;
+card.querySelector(".delete").addEventListener("click", function(){
+    card.remove();
+});
