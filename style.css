@@ -73,3 +73,36 @@ button:hover{
     text-decoration: line-through;
     opacity:0.6;
 }
+.event-card{
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.event-title{
+    margin: 0;
+    flex: 1;
+    word-break: break-word;
+}
+
+.delete-btn{
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.complete-btn{
+    margin-top: 10px;
+    width: 100%;
+}

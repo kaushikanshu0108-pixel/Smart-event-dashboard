@@ -18,13 +18,15 @@ addBtn.addEventListener("click", function(){
     card.classList.add("event-card");
 
     card.innerHTML = `
-        <h3>${title}</h3>
-        <p><strong>Date:</strong> ${date}</p>
-        <p><strong>Category:</strong> ${category}</p>
-        <p>${description}</p>
-
-        <button class="complete-btn">Mark Complete</button>
+    <div class="card-header">
+        <h3 class="event-title">${title}</h3>
         <button class="delete-btn">X</button>
+    </div>
+
+    <p><strong>Date:</strong> ${date}</p>
+    <p><strong>Category:</strong> ${category}</p>
+
+    <button class="complete-btn">Mark Complete</button>
     `;
 
     container.appendChild(card);
