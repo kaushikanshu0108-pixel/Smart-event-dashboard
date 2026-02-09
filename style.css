@@ -75,17 +75,19 @@ button:hover{
 
 /* Card Header */
 .card-header{
-    display:flex;
+    
     justify-content:space-between;
     align-items:center;
     gap:10px;
+    
 }
 
 .event-title{
     margin:0;
+    font-weight: 600;
     font-size:18px;
     flex:1;
-    word-break:break-word;
+    
 }
 
 /* Delete Button */
@@ -93,9 +95,12 @@ button:hover{
     background:#dc2626;
     color:white;
     border:none;
-    padding:5px 10px;
-    border-radius:5px;
+    padding:8px;
+    border-radius:6px;
     cursor:pointer;
+    margin-top: 0;
+    margin-bottom: 10px;
+    width: 100%;
 }
 
 .delete-btn:hover{
