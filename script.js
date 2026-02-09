@@ -1,35 +1,35 @@
-
 const addBtn = document.getElementById("addEvent");
-const container = document.getElementById("eventsContainer");
+const eventsContainer = document.getElementById("eventsContainer");
 
-addBtn.addEventListener("click", function(){
+addBtn.addEventListener("click", () => {
 
-    const title = document.getElementById("title").value;
+    const title = document.getElementById("title").value.trim();
     const date = document.getElementById("date").value;
     const category = document.getElementById("category").value;
-    const description = document.getElementById("description").value;
+    const description = document.getElementById("description").value.trim();
 
     if(title === "" || date === ""){
-        alert("Please fill required fields!");
+        alert("Please enter event title and date");
         return;
     }
 
     const card = document.createElement("div");
-    card.classList.add("event-card");
+    card.className = "event-card";
 
     card.innerHTML = `
-    <div class="card-header">
-        <h3 class="event-title">${title}</h3>
-        <button class="delete-btn">X</button>
-    </div>
+        <div class="card-header">
+            <h3 class="event-title">${title}</h3>
+            <button class="delete-btn">X</button>
+        </div>
 
-    <p><strong>Date:</strong> ${date}</p>
-    <p><strong>Category:</strong> ${category}</p>
+        <p><strong>Date:</strong> ${date}</p>
+        <p><strong>Category:</strong> ${category}</p>
+        <p>${description}</p>
 
-    <button class="complete-btn">Mark Complete</button>
+        <button class="complete-btn">Mark Complete</button>
     `;
 
-    container.appendChild(card);
+    eventsContainer.appendChild(card);
 
     // Clear form
     document.getElementById("title").value = "";
@@ -37,16 +37,14 @@ addBtn.addEventListener("click", function(){
     document.getElementById("description").value = "";
 });
 
-
-// ✅ Event Delegation
-container.addEventListener("click", function(e){
+/* Event Delegation */
+eventsContainer.addEventListener("click", (e) => {
 
     if(e.target.classList.contains("delete-btn")){
-        e.target.parentElement.remove();
+        e.target.closest(".event-card").remove();
     }
 
     if(e.target.classList.contains("complete-btn")){
-        e.target.parentElement.classList.toggle("completed");
+        e.target.closest(".event-card").classList.toggle("completed");
     }
-
 });

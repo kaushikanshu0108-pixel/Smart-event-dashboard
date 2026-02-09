@@ -1,21 +1,27 @@
+*{
+    box-sizing: border-box;
+}
 
- body{
-    font-family: Arial;
-    background: #f4f6fb;
+body{
     margin:0;
     padding:20px;
+    font-family: Arial, sans-serif;
+    background:#f4f6fb;
 }
 
 h1{
     text-align:center;
+    margin-bottom:20px;
 }
 
 .container{
     display:flex;
     gap:20px;
+    max-width:1100px;
+    margin:auto;
 }
 
-
+/* Form Section */
 .form-section{
     width:30%;
     background:white;
@@ -23,86 +29,91 @@ h1{
     border-radius:10px;
 }
 
+.form-section h2{
+    margin-top:0;
+}
+
 input, select, textarea{
     width:100%;
-    padding:8px;
     margin-top:10px;
+    padding:8px;
+    font-size:14px;
+}
+
+textarea{
+    resize:none;
+    height:80px;
 }
 
 button{
+    width:100%;
     margin-top:12px;
     padding:10px;
-    width:100%;
-    background:#6c63ff;
+    background:#2563eb;
     color:white;
     border:none;
     cursor:pointer;
+    border-radius:5px;
 }
 
 button:hover{
-    background:#574fd6;
+    background:#1e40af;
 }
 
-/* Cards */
+/* Events Section */
 .events-section{
     width:70%;
 }
 
+/* Event Card */
 .event-card{
     background:white;
     padding:15px;
-    padding-right:60px; /* ADD THIS */
     border-radius:10px;
-    margin-top:10px;
-    position:relative;
-    word-wrap: break-word; /* prevents overflow */
+    margin-bottom:15px;
 }
 
-.delete-btn{
-    position:absolute;
-    right:10px;
-    top:10px;
-    background:red;
-    color:white;
-    border:none;
-    padding:5px;
-    cursor:pointer;
-}
-
-.completed{
-    text-decoration: line-through;
-    opacity:0.6;
-}
-.event-card{
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    margin-top: 15px;
-}
-
+/* Card Header */
 .card-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
 }
 
 .event-title{
-    margin: 0;
-    flex: 1;
-    word-break: break-word;
+    margin:0;
+    font-size:18px;
+    flex:1;
+    word-break:break-word;
 }
 
+/* Delete Button */
 .delete-btn{
-    background: red;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
+    background:#dc2626;
+    color:white;
+    border:none;
+    padding:5px 10px;
+    border-radius:5px;
+    cursor:pointer;
 }
 
+.delete-btn:hover{
+    background:#b91c1c;
+}
+
+/* Complete Button */
 .complete-btn{
-    margin-top: 10px;
-    width: 100%;
+    margin-top:10px;
+    background:#16a34a;
+}
+
+.complete-btn:hover{
+    background:#15803d;
+}
+
+/* Completed State */
+.completed{
+    text-decoration:line-through;
+    opacity:0.6;
 }
