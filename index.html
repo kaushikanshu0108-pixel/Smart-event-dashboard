@@ -1,55 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
     <title>Smart Event Dashboard</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>🎯 Smart Event Dashboard</h1>
+<h1>🎯 Smart Event Dashboard</h1>
 
-    <div class="container">
+<div class="container">
 
-        <!-- Add Event -->
-        <div class="form-section">
-            <h2>Add New Event</h2>
+    <!-- Add Event -->
+    <div class="form-card">
+        <h2>Add New Event</h2>
 
-            <input type="text" id="title" placeholder="Event Title" />
-            <input type="date" id="date" />
+        <input type="text" id="title" placeholder="Event Title">
 
-            <select id="category">
-                <option value="Study">Study</option>
-                <option value="Personal">Personal</option>
-                <option value="Sports">Sports</option>
-            </select>
+        <input type="date" id="date">
 
-            <textarea id="description" placeholder="Event Description"></textarea>
+        <select id="category">
+            <option>Personal</option>
+            <option>Work</option>
+            <option>Study</option>
+        </select>
 
-            <button id="addEvent">Add Event</button>
-        </div>
+        <textarea id="description" placeholder="Event Description"></textarea>
 
-        <!-- Events -->
-        <div class="events-section">
-            <h2>My Events</h2>
-            <div id="eventsContainer">
-                <div class="event-card">
-
-                   <button class="delete-btn">X</button>
-
-                    <h3 class="event-title">Gym</h3>
-
-                    <p><strong>Date:</strong> 2026-02-12</p>
-                    <p><strong>Category:</strong> Personal</p>
-
-                    <button class="complete-btn">Mark Complete</button>
-                </div>
-            </div>
-        </div>
-
+        <button onclick="addEvent()">Add Event</button>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Event List -->
+    <div class="events-card">
+        <h2>My Events</h2>
+        <div id="eventList"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

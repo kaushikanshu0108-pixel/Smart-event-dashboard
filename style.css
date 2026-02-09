@@ -1,124 +1,110 @@
-*{
-    box-sizing: border-box;
-}
-
 body{
+    font-family: Arial, sans-serif;
+    background:#f3f4f6;
     margin:0;
     padding:20px;
-    font-family: Arial, sans-serif;
-    background:#f4f6fb;
 }
 
 h1{
     text-align:center;
-    margin-bottom:20px;
 }
 
 .container{
     display:flex;
     gap:20px;
-    max-width:1100px;
-    margin:auto;
+    margin-top:20px;
 }
 
-/* Form Section */
-.form-section{
-    width:30%;
+/* Cards */
+
+.form-card, .events-card{
     background:white;
     padding:20px;
     border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
-.form-section h2{
-    margin-top:0;
+.form-card{
+    width:30%;
 }
 
-input, select, textarea{
-    width:100%;
-    margin-top:10px;
-    padding:8px;
-    font-size:14px;
-}
-
-textarea{
-    resize:none;
-    height:80px;
-}
-
-button{
-    width:100%;
-    margin-top:12px;
-    padding:10px;
-    background:#2563eb;
-    color:white;
-    border:none;
-    cursor:pointer;
-    border-radius:5px;
-}
-
-button:hover{
-    background:#1e40af;
-}
-
-/* Events Section */
-.events-section{
+.events-card{
     width:70%;
 }
 
+/* Inputs */
+
+input, select, textarea{
+    width:100%;
+    padding:8px;
+    margin:8px 0;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+
+textarea{
+    height:70px;
+}
+
+/* Add button */
+
+.form-card button{
+    width:100%;
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:10px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.form-card button:hover{
+    background:#1e40af;
+}
+
 /* Event Card */
+
 .event-card{
-    background:white;
+    background:#fafafa;
     padding:15px;
     border-radius:10px;
-    margin-bottom:15px;
+    margin-top:15px;
 }
 
-/* Card Header */
-.card-header{
-    
-    justify-content:space-between;
-    align-items:center;
-    gap:10px;
-    
-}
+/* Delete button FULL WIDTH */
 
-.event-title{
-    margin:0;
-    font-weight: 600;
-    font-size:18px;
-    flex:1;
-    
-}
-
-/* Delete Button */
 .delete-btn{
+    width:100%;
     background:#dc2626;
     color:white;
     border:none;
     padding:8px;
     border-radius:6px;
     cursor:pointer;
-    margin-top: 0;
-    margin-bottom: 10px;
-    width: 100%;
+    margin-bottom:10px;
 }
 
-.delete-btn:hover{
-    background:#b91c1c;
+/* Title */
+
+.event-title{
+    font-size:20px;
+    font-weight:bold;
 }
 
-/* Complete Button */
+/* Complete button */
+
 .complete-btn{
-    margin-top:10px;
+    width:100%;
     background:#16a34a;
+    color:white;
+    border:none;
+    padding:8px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-top:10px;
 }
 
-.complete-btn:hover{
-    background:#15803d;
-}
-
-/* Completed State */
-.completed{
+.complete{
     text-decoration:line-through;
     opacity:0.6;
 }
