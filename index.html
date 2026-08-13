@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Smart Event Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="scene">
+
+    <header class="board-header">
+      <div class="stamp" aria-hidden="true">EVT</div>
+      <div>
+        <h1>Smart Event Dashboard</h1>
+        <p class="tagline">Every event, kept like a ticket stub — add it, track it, tear it off when it's done.</p>
+      </div>
+    </header>
+
+    <section class="control-bar">
+      <form id="event-form" class="ticket-form" autocomplete="off">
+        <div class="field field-title">
+          <label for="title">Event</label>
+          <input type="text" id="title" name="title" placeholder="e.g. AI/ML Guest Talk" required maxlength="60" />
+        </div>
+
+        <div class="field field-date">
+          <label for="date">Date</label>
+          <input type="date" id="date" name="date" required />
+        </div>
+
+        <div class="field field-category">
+          <label for="category">Category</label>
+          <select id="category" name="category">
+            <option value="workshop">Workshop</option>
+            <option value="seminar">Seminar</option>
+            <option value="fest">Fest</option>
+            <option value="deadline">Deadline</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="field field-note">
+          <label for="description">Note</label>
+          <input type="text" id="description" name="description" placeholder="Optional detail" maxlength="80" />
+        </div>
+
+        <button type="submit" class="add-btn">
+          <span>+ Add event</span>
+        </button>
+      </form>
+    </section>
+
+    <section class="filter-row">
+      <div class="tabs" role="tablist" aria-label="Filter events">
+        <button class="tab active" type="button" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="tab" type="button" data-filter="upcoming" role="tab" aria-selected="false">Upcoming</button>
+        <button class="tab" type="button" data-filter="past" role="tab" aria-selected="false">Past</button>
+        <button class="tab" type="button" data-filter="completed" role="tab" aria-selected="false">Completed</button>
+      </div>
+
+      <div class="search-wrap">
+        <input type="search" id="search" placeholder="Search events…" aria-label="Search events" />
+      </div>
+    </section>
+
+    <p class="count-line" id="count-line" aria-live="polite"></p>
+
+    <section id="event-list" class="ticket-grid" aria-live="polite"></section>
+
+    <div class="empty" id="empty-state" hidden>
+      <p id="empty-title">No events yet</p>
+      <span id="empty-sub">Add your first event above — it'll show up here as a ticket.</span>
+    </div>
+
+  </div>
+
+  <template id="ticket-template">
+    <article class="ticket" tabindex="0">
+      <div class="ticket-main">
+        <div class="ticket-top">
+          <span class="category-chip"></span>
+          <h3 class="ticket-title"></h3>
+        </div>
+        <p class="ticket-note"></p>
+        <div class="ticket-actions">
+          <button class="complete-btn" type="button">Mark complete</button>
+          <button class="delete-btn" type="button" aria-label="Delete event">Delete</button>
+        </div>
+      </div>
+      <div class="ticket-stub">
+        <span class="stub-month"></span>
+        <span class="stub-day"></span>
+        <span class="stub-weekday"></span>
+        <span class="done-stamp">DONE</span>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
