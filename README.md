@@ -2,7 +2,7 @@
 
 A dynamic web application built using **HTML, CSS, and Vanilla JavaScript** that allows users to create, manage, and interact with event cards.
 
-**Live Demo:** _add your GitHub Pages link here once enabled_
+**Live Demo: https://kaushikanshu0108-pixel.github.io/Smart-event-dashboard/**
 
 ## Features
 - Create new events
